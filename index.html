@@ -3,7 +3,7 @@
   <head>
     <title>Parcel Sandbox</title>
     <meta charset="UTF-8" />
-    <link href="src/styles.css" />
+    <link rel="stylesheet" href="src/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,59 +27,61 @@
   </head>
 
   <body>
-    <form id="search-form" class="mt-2 p-2">
+    <div class="parent">
+      <form id="search-form" class="mt-2 p-2">
+        <div class="row">
+          <div class="col-8">
+            <input
+              type="text"
+              class="form-control"
+              id="city-input"
+              aria-describedby="emailHelp"
+              placeholder="Enter City Name"
+            />
+          </div>
+          <div class="col-2">
+            <button id="search_btn" type="submit" class="btn btn-primary">
+              Search
+            </button>
+          </div>
+          <div class="col-2">
+            <button id="current_btn" type="submit" class="btn btn-success">
+              Current
+            </button>
+          </div>
+        </div>
+      </form>
+
       <div class="row">
-        <div class="col-8">
-          <input
-            type="text"
-            class="form-control"
-            id="city-input"
-            aria-describedby="emailHelp"
-            placeholder="Enter City Name"
-          />
+        <div class="row current-city">
+          <span class="current-city-name" id="current-city-name">Tehran</span>
         </div>
-        <div class="col-2">
-          <button id="search_btn" type="submit" class="btn btn-primary">
-            Search
-          </button>
-        </div>
-        <div class="col-2">
-          <button id="current_btn" type="submit" class="btn btn-success">
-            Current
-          </button>
-        </div>
-      </div>
-    </form>
 
-    <div class="row">
-      <div class="row current-city">
-        <span class="current-city-name" id="current-city-name">Tehran</span>
-      </div>
-
-      <div class="row current-city">
-        <span class="current-city-name" id="date-span" style="font-size: 20px;"
-          >Wednesday 10:34</span
-        >
-        <span
-          class="current-city-name"
-          id="weather-span"
-          style="font-size: 20px;"
-          >Clouds</span
-        >
-      </div>
-
-      <div class="row current-city-temp">
-        <div class="col-5">
-          <span style="font-size: 20px;">Temperature: </span>
-          <span id="current-city-temp">214</span>
-          <span style="font-size: 20px;">°C</span>
+        <div class="row current-city">
+          <span class="current-city-name" id="date-span" style="font-size: 20px"
+            >Wednesday 10:34</span
+          >
+          <span
+            class="current-city-name"
+            id="weather-span"
+            style="font-size: 20px"
+            >Clouds</span
+          >
         </div>
-        <div class="col-5">
-          <span style="font-size: 20px;">Humidity: </span>
-          <span id="current-city-humidity" style="font-size: 20px;"> </span>
-          <br />
-          <span id="current-city-temp" style="font-size: 20px;">Wind: </span>
-          <span id="current-city-wind" style="font-size: 20px;">Wind: </span>
+
+        <div class="row current-city-temp">
+          <div class="col-5">
+            <span style="font-size: 20px">Temperature: </span>
+            <span id="current-city-temp">214</span>
+            <span style="font-size: 20px">°C</span>
+          </div>
+          <div class="col-5">
+            <span style="font-size: 20px">Humidity: </span>
+            <span id="current-city-humidity" style="font-size: 20px"> </span>
+            <br />
+            <span id="current-city-temp" style="font-size: 20px">Wind: </span>
+            <span id="current-city-wind" style="font-size: 20px">Wind: </span>
+          </div>
         </div>
       </div>
     </div>
